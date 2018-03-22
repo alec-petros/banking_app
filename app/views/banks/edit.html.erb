@@ -1,0 +1,7 @@
+<h1>Edit Bank</h1>
+
+<%= render "form" %>
+<br>
+<%= form_tag(bank_path(@bank), method: "delete") do %>
+  <%= submit_tag name="Delete" %>
+<% end %>

@@ -1,0 +1,8 @@
+<h1><%= @bank.name %></h1>
+<h3><%= @bank.city.name %></h3>
+<ul>
+  <% @bank.accounts.each do |acct| %>
+    <li><%= "#{acct.customer.name} - #{acct.value}" %></li>
+  <% end %>
+</ul>
+<h3><%= link_to "Create New Account", "/banks/#{@bank.id}/create_account" %></h3>

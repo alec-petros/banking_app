@@ -1,0 +1,15 @@
+<h1>hello</h1>
+
+<%= form_for @account do |f| %>
+  <%= f.label :initial_deposit %>
+  <%= f.number_field :value %>
+  <br>
+  <%= f.label :customer %>
+  <%= f.collection_select :customer_id, Customer.all, :id, :name, {include_blank: "New Customer"} %>
+  <br>
+  <%= f.label :name %>
+  <%= f.text_field :customer %>
+  <br>
+  <%= f.hidden_field :bank_id %>
+  <%= f.submit %>
+<% end %>

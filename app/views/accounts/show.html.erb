@@ -1,0 +1,3 @@
+<h1><%= "#{@account.customer.name}'s Account'" %></h1>
+<h3>Bank: <%= link_to @account.bank.name, bank_path(@account.bank) %></h3>
+<h3>Balance: <%= @account.value.to_i %></h3>

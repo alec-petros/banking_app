@@ -1,0 +1,6 @@
+<h1>All Bank</h1>
+<ul>
+  <% @banks.each do |bank| %>
+  <li><%= "#{bank.name} - #{bank.city.name}" %></li>
+  <% end %>
+</ul>
